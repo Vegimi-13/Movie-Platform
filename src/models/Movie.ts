@@ -17,14 +17,49 @@ const MovieSchema = new Schema(
       required: true,
     },
 
+    year: {
+      type: Number,
+      default: new Date().getFullYear(),
+    },
+
+    runtime: {
+      type: String,
+      default: "2h 00m",
+    },
+
+    director: {
+      type: String,
+      default: "Unknown",
+    },
+
+    cast: {
+      type: [String],
+      default: [],
+    },
+
     poster: {
       type: String,
       required: true,
     },
 
+    backdrop: {
+      type: String,
+      default: "",
+    },
+
+    trailerUrl: {
+      type: String,
+      default: "",
+    },
+
     rating: {
       type: Number,
       default: 0,
+    },
+
+    featured: {
+      type: Boolean,
+      default: false,
     },
   },
   {
